@@ -1,28 +1,36 @@
-# Назва Проекту
+# University Studying Platform🎓
 
-Короткий опис вашого проекту. Наприклад: 
-Цей проект є системою для управління студентами, курсами та розкладом занять у навчальних закладах.
+**University Studying Platform** is a university learning platform designed to facilitate interaction between students and faculty. The platform allows uploading, storing, and checking homework, communicating between course participants, and automating many aspects of the educational process.
 
-## Зміст
 
-- [Особливості](#особливості)
-- [Структура бази даних](#структура-бази-даних)
-- [Встановлення](#встановлення)
-- [Використання](#використання)
-- [Технології](#технології)
-- [Автори](#автори)
-- [Ліцензія](#ліцензія)
+## Content
 
-## Особливості
+- [Features](#features)
+- [Functionality](#functionality)
+- [Build and run](#build-and-run)
+- [How to use the project](#how-to-use-the-project)
 
-- Управління студентськими обліковими записами та даними.
-- Ведення журналу успішності студентів.
-- Можливість призначати завдання та індивідуальні завдання студентам.
-- Розклад занять з прив'язкою до викладачів, груп та предметів.
-- Система повідомлень між користувачами.
-- Оцінювання курсів та предметів з можливістю створення різних форм атестації.
+## Features
+The main goal of this project is to create a modern, convenient and intuitive tool for organizing the educational process. The platform allows:
+- Management of student accounts and data.
+- Keeping a journal of students' progress.
+- Ability to assign tasks and individual tasks to students.
+- Schedule of classes linked to teachers, groups and subjects.
+- System of messages between users.
+- Evaluation of courses and subjects with the possibility of creating different forms of certification.
 
-### 1. Клонування репозиторію
+### Functionality
+* Uploading Assignments: Students can upload their homework in a variety of formats.
+* Review and Grading: Instructors can view assignment files, assign grades, and add comments.
+* Notifications: Automatic notifications of new assignments, tests and assessments.
+
+  
+### How to use the project
+Students and teachers can log into the platform through the web interface, upload or check assignments according to their roles.
+Instructors can customize courses, create assignments, and manage grades and feedback.
+
+
+### Build and run
 
 ```bash
 git clone https://github.com/your-username/your-repository.git
