@@ -33,5 +33,5 @@ Instructors can customize courses, create assignments, and manage grades and fee
 ### Build and run
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/KseniaGovorun/OOA.git
 cd your-repository
