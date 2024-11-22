@@ -1,0 +1,17 @@
+﻿@model IEnumerable<CourseGroup>
+
+<div class="wrapper">
+    @foreach(var courseGroup in Model)
+    {
+        <a class="course_anchor" asp-controller="Course" asp-action="Index" asp-route-courseId="@courseGroup.Id">
+            <div class="card card__one">
+                <figure class="card__img">
+                    <img src="@courseGroup.PhotoUrl" width="340" height="280" />
+                </figure>
+                <div class="card__desc">
+                    @courseGroup.Title
+                </div>
+            </div>
+        </a>
+    }
+</div>

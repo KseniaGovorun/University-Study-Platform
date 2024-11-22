@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Assignment>
+
+<div>
+
+    <h1>Навчальний план</h1>
+
+    <table id="customers">
+        <tr>
+            <th>Назва предмету</th>
+            <th>Викладач</th>
+            <th>Форма</th>
+            <th>Семестр</th>
+        </tr>
+
+        @for (int i = 0; i < ViewBag.Courses.Count; i++)
+        {
+            <tr>
+                <td>@ViewBag.Subjects[i].SubjectName</td>
+                <td>@ViewBag.Teachers[i]</td>
+                <td>@ViewBag.CreditForms[i].Title</td>
+                <td>@ViewBag.Terms[i].Name</td>
+            </tr>
+        }
+    </table>
+
+</div>

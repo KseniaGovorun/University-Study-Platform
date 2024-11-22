@@ -1,0 +1,26 @@
+﻿@model Course
+
+<div id="main">
+    <div id="course_name_box">
+        <span id="course_name">@ViewBag.CourseGroup.Title</span>
+    </div>
+    <div id="containers">
+        <div id="message_box">
+            @foreach(Message message in ViewBag.Messages)
+            {
+                <div class="message">
+                    <p>@message.Body</p>
+                </div>
+            }
+        </div>
+        <div id="assignment_box">
+            @foreach (Assignment assignment in ViewBag.Assignments)
+            {
+                <div class="assignment">
+                    <p>@assignment.Description</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

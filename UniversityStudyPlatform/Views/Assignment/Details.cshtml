@@ -1,0 +1,29 @@
+﻿<div id="main">
+    <div id="course_name_box">
+        <span id="course_name">@ViewBag.CourseGroup.Title</span>
+    </div>
+    <div id="description">
+        <h2>Опис завдання</h2>
+        <p>@ViewBag.Assignment.Description</p>
+    </div>
+    <div id="dates">
+        <div id="start_date">
+            <span>Дата початку: @ViewBag.Assignment.StartTime</span>
+        </div>
+        <div id="end_date">
+            <span>Дата завершення: @ViewBag.Assignment.EndTime</span>
+        </div>
+    </div>
+    <div id="attachment_box">
+        <form>
+            <label for="images" class="drop-container">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" id="images" accept="image/*" required>
+            </label>
+
+            <button type="submit" id="submit_button">Надіслати</button>
+        </form>
+    </div>
+</div>
+

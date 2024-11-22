@@ -1,0 +1,24 @@
+﻿.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-auto-rows: minmax(250px, auto);
+    grid-row-gap: 10px;
+}
+
+.shedule_block {
+    width: 100%;
+    height: 100%;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shedule_name {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

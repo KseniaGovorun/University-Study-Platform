@@ -1,0 +1,60 @@
+﻿#main {
+    width: 100%;
+    height: 800px;
+    border: 2px solid purple;
+}
+
+#course_name_box {
+    height: 15%;
+    width: 100%;
+    border: 2px solid red;
+}
+
+#course_name {
+    margin-left: 40px;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+#containers {
+    height: 85%;
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+#message_box {
+    height: 100%;
+    width: 40%;
+    border: 2px solid green;
+    float: left;
+    overflow: auto;
+}
+
+#assignment_box {
+    height: 100%;
+    width: 60%;
+    border: 2px solid pink;
+    float: right;
+    overflow: auto;
+}
+
+.message {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    border: 2px solid grey;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.assignment {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    border: 2px solid grey;
+    margin: auto;
+    margin-top: 10px;
+}

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Assignment>
+
+<div>
+
+    <h1>Завдання</h1>
+
+    <table id="customers">
+        <tr>
+            <th>Назва курсу</th>
+            <th>Опис завдання</th>
+            <th>Дата початку</th>
+            <th>Дата завершення</th>
+        </tr>
+
+        @for(int i = 0; i < ViewBag.CourseGroups.Count; i++)
+        {
+           <tr>
+                <td>@ViewBag.CourseGroups[i].Title</td>
+                <td>
+                    <a asp-controller="Assignment" asp-action="Details" asp-route-assignmentId="@ViewBag.AssignmentsOfStudent[i].Id">
+                        @ViewBag.AssignmentsOfStudent[i].Description
+                    </a>
+                </td>
+                <td>@ViewBag.AssignmentsOfStudent[i].StartTime</td>
+                <td>@ViewBag.AssignmentsOfStudent[i].EndTime</td>
+           </tr> 
+        }
+    </table>
+
+</div>
