@@ -30,7 +30,7 @@ namespace UniversityStudyPlatform.Controllers
 
                 foreach(Course course in coursesByStudent)
                 {
-                    subjects.Add(unitOfWork.subjectRepository.GetFirstOrDefault(u => u.SubjectId == course.SubjectId));
+                    subjects.Add(unitOfWork.subjectRepository.GetFirstOrDefault(u => u.Id == course.SubjectId));
                     teachersNames.Add(unitOfWork.teacherRepository.GetTeacherNameById(course.TeacherId));
                     creditForms.Add(unitOfWork.creditFormRepository.GetFirstOrDefault(u => u.Id == course.CreditFormId));
                     terms.Add(unitOfWork.termRepository.GetFirstOrDefault(u => u.Id == course.TermId));

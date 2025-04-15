@@ -8,7 +8,7 @@ namespace UniversityStudyPlatform.Models
 {
     public class StudentPerfomance
     {
-        public int StudentPerfomanceId { get; set; }
+        public int Id { get; set; }
 
         public int AccountBookId { get; set; }
         public AccountBook AccountBook { get; set; }
