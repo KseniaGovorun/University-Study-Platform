@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,14 @@ namespace UniversityStudyPlatform.DataAccess.UnitOfWork.Repository
 
         public string GetTeacherNameById(int id)
         {
-            var teacher = (from p in db.Persons
-                           where p.Id == (from t in db.Teachers
-                                          where t.Id == id
-                                          select t).FirstOrDefault().PersonId
-                           select p).FirstOrDefault();
+            var teacher = db.Teachers
+                            .Include(t => t.Person)
+                            .FirstOrDefault(t => t.Id == id);
 
-            string fullName = teacher.Name + " " + teacher.Surname;
+            if (teacher == null || teacher.Person == null)
+                return null;
+
+            string fullName = teacher.Person.Name + " " + teacher.Person.Surname;
 
             return fullName;
         }

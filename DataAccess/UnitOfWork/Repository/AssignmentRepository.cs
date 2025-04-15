@@ -41,14 +41,5 @@ namespace UniversityStudyPlatform.DataAccess.UnitOfWork.Repository
             return resultAssignments;
         }
 
-        public CourseGroup GetCourseGroupOfAssignment(Assignment assignment)
-        {
-            var courseGroup = from c in db.CourseGroups
-                              where assignment.CourseGroupId == c.Id
-                              select c;
-
-            return courseGroup.FirstOrDefault();
-        }
-
     }
 }

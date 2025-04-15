@@ -9,10 +9,10 @@ namespace UniversityStudyPlatform.Models
 {
     public class Subject
     {
-        public int SubjectId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public string SubjectName { get; set; }
+        public string Name { get; set; }
 
         public ICollection<StudentPerfomance> StudentPerfomances { get; set;}
         public ICollection<Course> Courses { get; set;}

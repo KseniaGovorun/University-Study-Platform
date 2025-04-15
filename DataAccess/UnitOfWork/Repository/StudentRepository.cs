@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using UniversityStudyPlatform.DataAccess.Data;
 using UniversityStudyPlatform.DataAccess.Repository.IRepository;
 using UniversityStudyPlatform.Models;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace UniversityStudyPlatform.DataAccess.UnitOfWork.Repository
 {
@@ -16,11 +11,26 @@ namespace UniversityStudyPlatform.DataAccess.UnitOfWork.Repository
 
         public Student GetStudentByPersonId(int id)
         {
-            var student = from s in db.Students
-                          where id == s.PersonId
-                          select s;
+            return db.Students.Include(s => s.Person).FirstOrDefault(s => s.PersonId == id);
+        }
 
-            return student.FirstOrDefault();
+        // ✅ Метод: Отримати всі оцінки (StudentPerformance) для студента
+        public IEnumerable<StudentPerfomance> GetStudentPerformanceByStudentId(int studentId)
+        {
+            return db.StudentPerfomances
+                     .Include(sp => sp.Subject)
+                     .Include(sp => sp.AccountBook)
+                     .Where(sp => sp.AccountBook.StudentId == studentId)
+                     .ToList();
+        }
+
+        // ✅ Метод: Обрахувати середній бал студента
+        public double CalculateStudentTotalGPA(int studentId)
+        {
+            var performances = GetStudentPerformanceByStudentId(studentId);
+            if (!performances.Any()) return 0;
+
+            return performances.Average(p => p.TotalPoint);
         }
     }
 }

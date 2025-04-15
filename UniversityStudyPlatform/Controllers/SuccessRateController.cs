@@ -31,7 +31,7 @@ namespace UniversityStudyPlatform.Controllers
 
                 foreach(StudentPerfomance studentPerfomance in studentPerfomancesByStudent)
                 {
-                    subjects.Add(unitOfWork.subjectRepository.GetFirstOrDefault(u => u.SubjectId == studentPerfomance.SubjectId));
+                    subjects.Add(unitOfWork.subjectRepository.GetFirstOrDefault(u => u.Id == studentPerfomance.SubjectId));
                     сurrentPoints.Add(studentPerfomance.CurrentPoint);
                     examPoints.Add(studentPerfomance.ExamPoint);
                     totalPoints.Add(studentPerfomance.TotalPoint);
